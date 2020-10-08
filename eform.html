@@ -1,0 +1,110 @@
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="form1.css">
+        <style>
+          body {font-family: "Lato", sans-serif;
+                background-color: black;}
+        </style>
+    </head>
+    <body>
+      
+******
+
+      <form action="insert.php" method="POST">
+
+        <h1>REGISTER</h1>
+
+        <fieldset>
+          <legend><span class="number">1</span><b>Your basic info</b></legend>
+          <label for="name"><b>Name:</b></label>
+          <input type="text" id="name" name="user_name"placeholder="Full Name" pattern="^[a-zA-Z]+ [a-zA-Z]+$">
+          <label for="mob"><b>Whatsapp Number:</b></label>
+          <input type=text name="mob" placeholder="+91" id="mob" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+          <label for="mail"><b>Email:</b></label>
+          <input type="email" id="mail" name="user_email">
+
+
+          <label><b>Year:</b></label>
+          <input type="radio" id="first_yr" value="first_yr" name="user_year"><label for="first_yr" class="light">First Year</label><br>
+          <input type="radio" id="second_yr" value="second_yr" name="user_year"><label for="second_yr" class="light">Second Year</label><br>
+          <input type="radio" id="third_yr" value="third_yr" name="user_year"><label for="third_yr" class="light">Third Year</label><br>
+          <input type="radio" id="fourth_yr" value="fourth_yr" name="user_year"><label for="fourth_yr" class="light">Fourth Year</label><br>
+          
+        </fieldset>
+
+        
+        <fieldset>
+          <legend><span class="number">2</span><b>Your profile</b></legend>
+          <label><b> Main Event: </b></label>
+          <input type="radio" id="protsahan" value="protsahan" name="user_mevent"><label for="protsahan" class="light">Protsahan</label><br>
+          <input type="radio" id="ambiora" value="ambiora" name="user_mevent"><label for="ambiora" class="light">Ambiora</label><br>
+          <input type="radio" id="ysf" value="ysf" name="user_mevent"><label for="ysf" class="light">YSF</label><br>
+          <input type="radio" id="nmmun" value="nmmun" name="user_mevent"><label for="nmmun" class="light">NMMUN</label><br><br>
+        <label for="events"><b>Field:</b></label>
+
+        
+        <select id="events" name="user_event" required>
+          <option value="" disabled selected hidden>Select</option>
+          <optgroup label="Protsahan">
+            <option value="P_Docu">Documentation</option>
+            <option value="P_Marketing">Marketing</option>
+            <option value="P_Creative">Creative</option>
+            <option value="P_Logistics"> Logistics</option>
+            <option value="P_Sponsorship">Sponsorship</option>
+            <option value="P_CRandH">CR and H</option>
+            <option value="P_Stage">Stage and Sound</option>
+          </optgroup>
+          <optgroup label="Ambiora">
+            <option value="A_Documentation">Documentation</option>
+            <option value="A_Marketing">Marketing</option>
+            <option value="A_Creative">Creative</option>
+            <option value="A_Logistics"> Logistics</option>
+            <option value="A_Sponsorship">Sponsorship</option>
+            <option value="A_CRandH">CR and H</option>
+            <option value="A_Stage">Stage and Sound</option>
+          </optgroup>
+          <optgroup label="YSF">
+            <option value="Y_Documentation">Documentation</option>
+            <option value="Y_Marketing">Marketing</option>
+            <option value="Y_Creative">Creative</option>
+            <option value="Y_Logistics"> Logistics</option>
+            <option value="Y_Sponsorship">Sponsorship</option>
+            <option value="Y_CRandH">CR and H</option>
+            <option value="Y_Stage">Stage and Sound</option>
+          </optgroup>
+          <optgroup label="NMMUN">
+            <option value="N_Secretary">Secretary</option>
+            <option value="N_Documentation">Documentation</option>
+            <option value="N_Marketing">Marketing</option>
+            <option value="N_Creative">Creative</option>
+            <option value="N_DsandH">Ds n H</option>
+            <option value="N_Sponsorship">Sponsorship</option>
+            <option value="N_Logistics">Logistics</option>
+          </optgroup>
+        </select>
+
+          <label><b>Experience in the selected field:</b></label>
+          <input type="radio" id="one" value="one" name="user_experience"><label class="light" for="one">A Year</label><br>
+            <input type="radio" id="two_or_3" value="two_or_3" name="user_experience"><label class="light" for="two_or_3">
+            2 - 3 Years</label><br>
+          <input type="radio" id="more_4" value="more_4" name="user_experience"><label class="light" for="more_4">More than 4 Years</label>
+
+        </fieldset>
+        <fieldset>   
+          <label for="bio"><b>Something about yourself:</b></label>
+          <textarea id="bio" name="user_bio" >
+          </textarea>
+        </fieldset>
+*******
+        <button type="submit">Sign Up</button>
+        <a href="someplace.html"></a>
+      </form>
+
+    </body>
+</html>
