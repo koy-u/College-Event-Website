@@ -1,0 +1,69 @@
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="eform.css">
+        <style>
+          body {font-family: "Lato", sans-serif;
+                background-color: black;}
+        </style>
+        <script>
+          function resetSelection() {
+          document.getElementById("clubSelect").selectedIndex = 0;
+          } 
+        </script>
+      </head>
+      <body onload="resetSelection()">
+
+      <form autocomplete="off" action="insert.php" method="POST">
+
+        <h1>REGISTER</h1>
+
+        <fieldset>
+          <legend><span class="number">1</span><b>Your basic info</b></legend>
+          <label for="name"><b>Name:</b></label>
+          <input type="text" id="name" name="user_name" placeholder="Full Name" pattern="^[a-zA-Z]+ [a-zA-Z]+$" required >
+          <label for="mob"><b>Whatsapp Number:</b></label>
+          <input type=text name="mob" placeholder="+91" pattern="^\d{10}$" required>
+          <label for="mail"><b>Email:</b></label>
+          <input type="email" id="mail" name="user_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+
+          <label><b>Year:</b></label>
+          <input type="radio" id="first_yr" value="first_yr" name="user_year" required><label for="first_yr" class="light">First Year</label><br>
+          <input type="radio" id="second_yr" value="second_yr" name="user_year"><label for="second_yr" class="light">Second Year</label><br>
+          <input type="radio" id="third_yr" value="third_yr" name="user_year"><label for="third_yr" class="light">Third Year</label><br>
+          <input type="radio" id="fourth_yr" value="fourth_yr" name="user_year"><label for="fourth_yr" class="light">Fourth Year</label><br>
+          
+        </fieldset>
+
+        
+        <fieldset>
+          <legend><span class="number">2</span><b>Join Club</b></legend>
+          <input type="radio" id="aiesec" value="aiesec" name="clubSelect" required><label class="light" for="aiesec">AIESEC</label><br>
+          <input type="radio" id="atrangi" value="atrangi" name="clubSelect"><label class="light" for="atrangi">Atrangi</label><br>
+            <input type="radio" id="eoso" value="eoso" name="clubSelect"><label class="light" for="eoso">Each One Save One</label><br>
+          <input type="radio" id="NMdb" value="NMdb" name="clubSelect"><label class="light" for="NMdb">NM Debate Society</label>
+        <br>
+        <input type="radio" id="pinaka" value="pinaka" name="clubSelect"><label class="light" for="pinaka">Team Pinaka</label><br>
+          <input type="radio" id="rang" value="rang" name="clubSelect"><label class="light" for="rang">Rang Drama Club</label>
+        <br><br>
+          <label><b>Experience in the selected field:</b></label>
+          <input type="radio" id="none" value="none" name="user_experience" required><label class="light" for="none">No Experience</label><br>
+          <input type="radio" id="one" value="one" name="user_experience"><label class="light" for="one">A Year</label><br>
+            <input type="radio" id="two_or_3" value="two_or_3" name="user_experience"><label class="light" for="two_or_3">
+            2 - 3 Years</label><br>
+          <input type="radio" id="more_4" value="more_4" name="user_experience"><label class="light" for="more_4">More than 4 Years</label>
+        </fieldset>
+        <fieldset>   
+          <label for="bio"><b>Something about yourself:</b></label>
+          <textarea id="bio" name="user_bio" placeholder="type here..."></textarea>
+        </fieldset>
+        <button type="submit">SUBMIT</button>
+      </form>
+
+    </body>
+</html>
