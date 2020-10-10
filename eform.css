@@ -41,8 +41,8 @@ select {
   padding:9px 0;
   width:100%;
   border:none;
-  border-bottom:1px solid #ccc
-  background: rgba(255,255,255,0.1);
+  border-bottom:1px solid #ccc;
+  background-color: rgba(255,255,255,0.1);
   font-size: 16px;
   height: auto;
   margin: 0;
